@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: apology-playlist
+    env: static
+    staticPublishPath: .
+    buildCommand: ""

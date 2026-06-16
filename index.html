@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Una página para pedir perdón con un Wordbox: encuentra las palabras escondidas para revelar la frase secreta." />
+    <title>Para mi princesa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">Para mi princesa</div>
+        </nav>
+
+        <section class="hero__content">
+          <div class="hero__copy">
+            <p class="eyebrow">Misión: recuperar la playlist</p>
+            <h1>Para mi princesa</h1>
+            <p class="lead">
+              Perdón si me demoré en pedirte perdón y en recuperar la playlist, pero esto lo hice con mucho amor mi cielo 💕
+            </p>
+            <div class="hero__actions">
+              <button class="button button--primary" id="reset-button" type="button">Empezar juego</button>
+            </div>
+          </div>
+
+          <div class="hero__card">
+            <img src="assets/yo niño.jpeg" alt="Un niño que recuerda la playlist" class="hero__image" />
+            <p class="hero__caption">Recuerda que le quitaste la playlist a este niño UnU</p>
+          </div>
+        </section>
+      </header>
+
+      <main class="content">
+        <section class="game-section">
+          <div class="section-heading">
+            <p class="eyebrow">Wordbox del perdón</p>
+            <h2>Encuentra las 6 palabras escondidas</h2>
+            <p>
+              Amor aqui tienes que juegar al Wordbox donde siempre me ganas JAJAJ :(
+            </p>
+          </div>
+
+          <div class="phrase" id="phrase" aria-label="Frase secreta"></div>
+
+          <p class="track-note">
+            <span id="found-count">0</span> de <span id="total-count">6</span> palabras descubiertas
+          </p>
+
+          <div class="board-shell">
+            <div class="current-word" id="current-word" aria-live="polite">&nbsp;</div>
+            <div class="board" id="board" aria-label="Sopa de letras"></div>
+            <div class="board-note">Conecta solo letras vecinas para formar la palabra.</div>
+          </div>
+        </section>
+
+        <section class="playlist-section">
+          <p class="eyebrow">Última misión</p>
+          <h2>Ahora que ya pasaste el juego, tienes que darme otra vez la playlist 😾</h2>
+          <a
+            class="button button--primary playlist-button"
+            href="https://wa.me/593978620462?text=Listo%20mi%20amor%2C%20aqu%C3%AD%20tienes%20de%20vuelta%20la%20playlist%0ALink%3A%20%5BAqu%C3%AD%20va%20el%20link%20de%20la%20playlist%5D"
+            target="_blank"
+            rel="noopener"
+          >
+            Enviar Playlist
+          </a>
+        </section>
+      </main>
+    </div>
+
+    <div class="celebrate" id="celebrate" hidden>
+      <canvas class="celebrate__canvas" id="confetti"></canvas>
+      <div class="celebrate__message">
+        <h2>Muy bien mi amor que pilas eres 😁</h2>
+        <p>(Ya me perdonaste verás jeje)</p>
+        <button class="button button--primary" id="celebrate-again" type="button">Cerrar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
