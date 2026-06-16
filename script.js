@@ -8,7 +8,7 @@ const PHRASE = ['TE', 'PERDONO', 'AMOR', 'DE', 'MI', 'VIDA'];
 // Cada una tiene al menos un camino de letras vecinas (incluida la diagonal):
 //   PERDONO -> P(0,1) E(1,1) R(1,2) D(0,2) O(0,3) N(1,3) O(2,3)
 //   AMOR    -> A(3,5) M(4,5) O(4,6) R(3,6)
-//   VIDA    -> V(5,2) I(6,3) D(5,3) A(6,4)
+//   VIDA    -> V(5,2) I(6,3) D(5,3) A(5,4)
 //   TE      -> T(2,5) E(1,6)
 //   DE      -> D(6,0) E(5,0)
 //   MI      -> M(2,0) I(3,1)
@@ -19,7 +19,7 @@ const BOARD = [
   ['R', 'I', 'V', 'P', 'O', 'A', 'R'],
   ['D', 'O', 'N', 'E', 'S', 'M', 'O'],
   ['E', 'L', 'V', 'D', 'A', 'T', 'I'],
-  ['D', 'U', 'R', 'I', 'A', 'O', 'E'],
+  ['D', 'U', 'R', 'I', 'C', 'O', 'E'],
 ];
 
 const board = document.getElementById('board');
@@ -130,7 +130,7 @@ function clearSelection() {
 
 function updateCurrentWord() {
   const word = selectedCells.map((cell) => cell.letter).join('');
-  currentWordEl.textContent = word || ' ';
+  currentWordEl.textContent = word || ' ';
 }
 
 function addCell(cell) {

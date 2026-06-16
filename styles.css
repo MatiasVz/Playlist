@@ -448,11 +448,20 @@ button {
   animation: pop 360ms ease;
 }
 
+.celebrate__phrase {
+  margin: 0 0 4px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--accent-3);
+}
+
 .celebrate__message h2 {
   margin: 0;
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(2.2rem, 7vw, 3.4rem);
-  line-height: 1;
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  line-height: 1.05;
 }
 
 .celebrate__message p {
